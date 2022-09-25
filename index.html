@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Generador de Presupuestos</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar justify-content-center">
+            <a href="#">Generador de Presupuestos</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div>
+
+            <h2>Nivel del encargado del service</h2>
+
+            <fieldset>
+                <legend>Seleccione un nivel</legend>
+                <p><input type="radio" name="nivel" id="amateur" value="0.25"> Amateur (<span>0.25</span> = Valor del 25%)</p>
+                <p><input type="radio" name="nivel" id="semi-profesional" value="0.50"> Semi-Profesional (<span>0.50</span> = Valor del 50%)</p>
+                <p><input type="radio" name="nivel" id="profesional" value="0.75"> Profesional (<span>0.75</span> = Valor del 75%)</p>
+                <p><input type="radio" name="nivel" id="certificado" value="1"> Profesional Certificado (<span>1.00</span> = Valor del 100%)</p>
+            </fieldset>
+
+        </div>
+
+        <div class="">
+            
+            <h2>Servicios</h2>
+
+            <div class="table">
+
+                <table class="">
+
+                    <thead class="">
+                        <td class="col-6">Servicio Técnico</td>
+                        <td class="col-3">Valor</td>
+                        <td class="col-2">Agregar</td>
+                        <td class="col-1">Cantidad</td>
+                    </thead>
+
+                    <div class="table" id="lista-servicios">
+                        <tr class="">
+                            <td class="col-6 nombre">Service 1</td>
+                            <td class="col-3 valor"><span>25</span> USD</td>
+                            <td class="col-1"><input type="button" value="+" class="agregar-carrito" data-id="1"><input type="button" value="-"></td>
+                            <td class="col-1">0</td>
+                        </tr>
+                        <tr class="">
+                            <td class="col-6">Service 2</td>
+                            <td class="col-3 valor"><span>30</span> USD</td>
+                            <td class="col-1"><input type="button" value="+" class="agregar-carrito" data-id="2"><input type="button" value="-"></td>
+                            <td class="col-1">0</td>
+                        </tr>
+                        <tr class="">
+                            <td class="col-6">Service 3</td>
+                            <td class="col-3 valor"><span>35</span> USD</td>
+                            <td class="col-1"><input type="button" value="+" class="agregar-carrito" data-id="3"><input type="button" value="-"></td>
+                            <td class="col-1">0</td>
+                        </tr>
+                        <tr class="">
+                            <td class="col-6">Service 4</td>
+                            <td class="col-3 valor"><span>40</span> USD</td>
+                            <td class="col-1"><input type="button" value="+" class="agregar-carrito"><input type="button" value="-"></td>
+                            <td class="col-1">0</td>
+                        </tr>
+                        <tr class="">
+                            <td class="col-6">Service 5</td>
+                            <td class="col-3 valor"><span>45</span> USD</td>
+                            <td class="col-1"><input type="button" value="+" class="agregar-carrito"><input type="button" value="-"></td>
+                            <td class="col-1">0</td>
+                        </tr>
+                    </div>
+                            
+                </table>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <input type="submit" value="Generar Carrito" id="btn_carrito" class="btn btn-primary btn-block">
+
+            <div id="carrito">
+
+                <table id="lista-carrito" class="table">
+                    <thead>
+                        <tr>
+                            <th>Servicio Técnico</th>
+                            <th>Valor</th>
+                            <th>Cantidad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <a href="#" id="vaciar-carrito" class="btn btn-secondary btn-block">Vaciar Carrito</a>
+                <a href="#" id="generar-presupuesto" class="btn btn-danger btn-block">Generar Presupuesto</a>
+
+            </div>
+
+        </div>
+
+
+    </main>
+    
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<script src="js/eventos.js"></script>
+
+</body>
+
+</html>
